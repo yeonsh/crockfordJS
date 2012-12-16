@@ -1,4 +1,8 @@
-function isNumber(value) {
-    return typeof value === 'number' && isFinite(value);
+function isNumber(arg) {
+    return typeof arg === 'number' && isFinite(arg);
 }
 
+function isArray(arg) {
+    return (arg && typeof arg === 'object' && typeof arg.length == 'number' && !(arg.propertyIsEnumerable('length'));
+}
+        
